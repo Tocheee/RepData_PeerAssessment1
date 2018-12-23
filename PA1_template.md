@@ -14,13 +14,6 @@ output:
 
 First, I will set my working directory and download the data using the data.table package
 
-```r
-setwd("~/R/RepData_PeerAssessment1-master")
-```
-
-```
-## Error in setwd("~/R/RepData_PeerAssessment1-master"): cannot change working directory
-```
 
 
 ```r
@@ -134,7 +127,7 @@ text(x=mean(totalsteps$V1,na.rm=TRUE),y=0,"10766",pos=3)
 legend("topright","mean and median",col="red",lty=3)
 ```
 
-![plot of chunk unnamed-chunk-36](./figure/unnamed-chunk-36-1.png)
+![plot of chunk unnamed-chunk-30](./figure/unnamed-chunk-30-1.png)
 #### What is the average daily activity patterrn?
 
 I will use the data.table package to get the average steps per interval.
@@ -160,7 +153,7 @@ head(avgsteps)
 plot(x = avgsteps$interval,y=avgsteps$V1,type='l', xlab="Interval",ylab="Steps",main="Average Steps per 5 min interval")
 ```
 
-![plot of chunk unnamed-chunk-38](./figure/unnamed-chunk-38-1.png)
+![plot of chunk unnamed-chunk-32](./figure/unnamed-chunk-32-1.png)
 
 
 ```r
@@ -191,7 +184,7 @@ legend("topright","Max Interval",col="red",lty=1)
 abline(v=max_interval$interval,col="red")
 ```
 
-![plot of chunk unnamed-chunk-40](./figure/unnamed-chunk-40-1.png)
+![plot of chunk unnamed-chunk-34](./figure/unnamed-chunk-34-1.png)
 
 ###   Imputing Missing Values
 ##### Total missing values in the dataset
@@ -287,7 +280,7 @@ text(x=mean(plot_data$V1),y=0,"10766",pos=3)
 legend("topright","Mean",col="blue",lty=2)
 ```
 
-![plot of chunk unnamed-chunk-45](./figure/unnamed-chunk-45-1.png)
+![plot of chunk unnamed-chunk-39](./figure/unnamed-chunk-39-1.png)
 
 
 ```r
@@ -375,5 +368,5 @@ p <- plotting_data %>% ggplot(aes(interval,V3))
 p + geom_line() + facet_grid(type_of_day~.,switch = "y") + ylab("Average Steps") + xlab("Interval") + ggtitle("Average Steps Taken per Day")
 ```
 
-![plot of chunk unnamed-chunk-50](./figure/unnamed-chunk-50-1.png)
+![plot of chunk unnamed-chunk-44](./figure/unnamed-chunk-44-1.png)
 

@@ -15,9 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 #### Analyzing data from the Activity Monitoring Dataset
 
 First, I will set my working directory and download the data using the data.table package
-```{r}
-setwd("~/R/RepData_PeerAssessment1-master")
-```
+
 
 ```{r}
 library(data.table)#for subsetting
